@@ -65,11 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void feature1() {
-        Log.d(TAG, "developing feature 1");
-    }
-
-    public void feature3() {
-        Log.d(TAG, "developing feature 3");
+        Log.d(TAG, "developing feature 2");
     }
 
     private void initView() {
@@ -102,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         requestData();
     }
 
-    private void makeRandomData() {
+    void makeRandomData() {
         adapter.clear();
 
         int j;
@@ -120,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void requestData() {
+    void requestData() {
         adapter.clear();
         String url = "http://www.wanandroid.com/tools/mockapi/3883/info";
         OkHttpClient client = new OkHttpClient();
