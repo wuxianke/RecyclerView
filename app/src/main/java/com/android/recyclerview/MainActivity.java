@@ -64,10 +64,6 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
-    public void feature1() {
-        Log.d(TAG, "developing feature 2");
-    }
-
     private void initView() {
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
