@@ -41,6 +41,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
     @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -61,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         adapter = new BaseRvAdapter<>();
 
         initView();
+    }
+
+    public void feature1() {
+        Log.d(TAG, "developing feature 1");
     }
 
     private void initView() {
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         requestData();
     }
 
-    void makeRandomData() {
+    private void makeRandomData() {
         adapter.clear();
 
         int j;
@@ -111,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void requestData() {
+    private void requestData() {
         adapter.clear();
         String url = "http://www.wanandroid.com/tools/mockapi/3883/info";
         OkHttpClient client = new OkHttpClient();
